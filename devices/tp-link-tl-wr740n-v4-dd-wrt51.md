@@ -68,4 +68,7 @@ These two uploaded files were inspected locally. The factory image header identi
 
 Google Drive destination: [`ROUTER_LAB/01_FIRMWARE/TP-LINK-TL-WR740N-v4/`](https://drive.google.com/drive/folders/1xOXd8DA5s9WUorBKTWUjxLXU3Jj4C_xO).
 
-**Upload status:** Destination folder created; binary files **not yet uploaded**. Confirm both files are present in Drive before marking the archive complete. Checksums verify byte-for-byte integrity against the inspected uploads, not manufacturer authenticity.
+**Upload status (2026-10-14):** Both binary files are present in the designated Google Drive folder. Names and byte sizes match the inspected uploads; Drive-side SHA-256 checksums have not been independently reverified.
+
+- [factory-to-ddwrt.bin](https://drive.google.com/file/d/1YDXR6XT_EmNVI-B5LGnkDwrq-Wb2301u/view) — 3,932,160 bytes
+- [tl-wr740nv4-webflash.bin](https://drive.google.com/file/d/1NAgivV7AuoJYnJx0hvQgQkoJ5RPBvwPQ/view) — 3,932,188 bytes Checksums verify byte-for-byte integrity against the inspected uploads, not manufacturer authenticity.
