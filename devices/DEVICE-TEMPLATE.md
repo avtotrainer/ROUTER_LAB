@@ -83,3 +83,26 @@
 - Vendor documentation: TODO
 - Firmware release notes: TODO
 - Related Router Lab documentation: TODO
+
+## Mandatory post-configuration acceptance
+
+Complete this section after each configuration change and before marking the device **Complete**. Enter **Pass**, **Fail**, **Not applicable**, or **Not tested** and include brief evidence/date. **Not tested** does not count as a pass.
+
+| Required check | Status | Date / evidence |
+| --- | --- | --- |
+| Exact model, hardware revision, firmware build confirmed on device | Not tested | — |
+| LAN management IP, subnet, and connectivity from NixOS | Not tested | — |
+| Wi-Fi SSID, association, and intended connectivity (if applicable) | Not tested | — |
+| Bridge/AP membership and forwarding (if applicable) | Not tested | — |
+| DHCP server behavior, gateway, and DNS appropriate to topology | Not tested | — |
+| Fresh backup created and present in private Google Drive `02_BACKUPS` | Not tested | — |
+| Applicable firmware archived in Google Drive `01_FIRMWARE`; checksums/source documented | Not tested | — |
+| GitHub device record updated with test evidence and links, without secrets | Not tested | — |
+
+**Acceptance status:** Pending validation / Complete / Failed (select one)
+
+**Remaining issues / risks:** TODO
+
+**Restore test:** Not performed / Performed (requires explicit approval; not a routine acceptance requirement)
+
+See [Router Lab knowledge base](../ROUTER-LAB-KNOWLEDGE.md#8-mandatory-post-configuration-validation) for the mandatory workflow.
