@@ -56,3 +56,16 @@ DD-WRT generated invalid wireless channel/frequency values (`channel=-225`, `fre
 ## Notes
 
 This entry records previously reported configuration and validation. The router was not physically available during the current NixOS NetworkManager checks, so no new live device verification was performed.
+
+## Firmware image inventory (verified 2026-10-14)
+
+These two uploaded files were inspected locally. The factory image header identifies TP-LINK 740 v4; exact firmware build and authenticity have **not** been independently established. Do not flash without confirming hardware revision, trusted provenance, and recovery procedure.
+
+| File | Intended use | Size (bytes) | SHA-256 |
+| --- | --- | ---: | --- |
+| `factory-to-ddwrt.bin` | Stock-to-DD-WRT installation image | 3932160 | `2ec29792320a03c4f2d7ff731cd2d882624b2e6e7f6ffec24d3942678b069221` |
+| `tl-wr740nv4-webflash.bin` | DD-WRT web-upgrade image | 3932188 | `c1ea85534848cddc14cea1864d48a8c981708aa9ac8e4a110691979645a6b051` |
+
+Google Drive destination: [`ROUTER_LAB/01_FIRMWARE/TP-LINK-TL-WR740N-v4/`](https://drive.google.com/drive/folders/1xOXd8DA5s9WUorBKTWUjxLXU3Jj4C_xO).
+
+**Upload status:** Destination folder created; binary files **not yet uploaded**. Confirm both files are present in Drive before marking the archive complete. Checksums verify byte-for-byte integrity against the inspected uploads, not manufacturer authenticity.
