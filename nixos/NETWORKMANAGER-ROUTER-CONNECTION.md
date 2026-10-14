@@ -119,3 +119,18 @@ If the internet route unexpectedly changes, inspect `ip -4 route` and `ip -6 rou
 ## Notes
 
 Commands use standard `nmcli` and `ip` utilities available in a typical NixOS NetworkManager setup. If `nmcli` is unavailable, confirm that NetworkManager is enabled in NixOS configuration rather than making ad hoc system-wide networking changes. The profile names are conventions for this project.
+
+## 7. Verified workstation configuration (2026-10-14)
+
+The following profile settings were confirmed from actual `nmcli` and `ip -4 route` output on the NixOS laptop. This verifies **saved configuration**, not a successful DHCP lease or router-management session.
+
+- Ethernet interface: `enp2s0`; Wi-Fi interface: `wlp0s20f3`.
+- Wi-Fi was connected to `IV 5G` with `192.168.100.12/24` and default route via `192.168.100.1`.
+- Existing static profile `router-config`: `ipv4.method manual`, `10.107.143.101/24`, no IPv4 gateway, `ipv4.never-default yes`, `ipv6.method disabled`, `connection.autoconnect no`.
+- New DHCP profile `ethernet-auto`: `connection.interface-name enp2s0`, `connection.autoconnect yes`, `connection.autoconnect-priority 10`, `ipv4.method auto`, `ipv4.never-default yes`, `ipv4.ignore-auto-dns yes`, `ipv6.method disabled`.
+- At the time of the final profile listing, `router-config` was active and `ethernet-auto` was saved but inactive.
+- The target router was not physically present; no ping, DHCP lease, or router web-interface test was performed. A carrier signal was observed on Ethernet, but the connected device was not identified.
+
+### Recommended usage
+
+Connect a DHCP-enabled router by Ethernet and allow `ethernet-auto` to activate; verify the obtained address and that the default route still uses Wi-Fi. For a router with no DHCP, manually activate `router-config` **only after checking its actual subnet**. Do not assume `10.107.143.1` is the target router address.
