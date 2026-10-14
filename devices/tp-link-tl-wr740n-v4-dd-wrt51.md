@@ -10,7 +10,7 @@
 | Device name | DD-WRT51 |
 | Inventory status | Previously configured; device not currently on hand |
 | Firmware family | DD-WRT |
-| Exact firmware build | Not recorded |
+| Exact firmware build | r66345 (in backup filename; not independently checked on device) |
 
 ## Verified configuration from previous Router Lab session
 
@@ -40,8 +40,11 @@ DD-WRT generated invalid wireless channel/frequency values (`channel=-225`, `fre
 ## Backup and recovery
 
 - Google Drive backup destination: `ROUTER_LAB/02_BACKUPS/DD-WRT51/`
-- Backup existence: Not verified
-- Restore procedure: Not recorded
+- Backup existence: Confirmed in Google Drive (2026-10-14)
+- Backup file: `nvrambak_r66345_DD-WRT51_TP-Link TL-WR740N v4.bin` (13,168 bytes)
+- Backup SHA-256 (locally inspected upload; Drive-side digest not independently verified): `7338f4a18e8f9d699d1df48583f5c9ca8943ec900e62c9ad702d0f4724f3eef4`
+- Backup location: [Private Google Drive folder](https://drive.google.com/drive/folders/1b2XgWFxpMv2OYpu1yPvi9EoWBOeCJTon)
+- Restore procedure: DD-WRT Administration → Backup → Restore Configuration; only use compatible backups from the same model and firmware; do not restore without explicit authorization
 - Recovery test: Not recorded
 
 ## Follow-up checks when the device is available
@@ -51,7 +54,7 @@ DD-WRT generated invalid wireless channel/frequency values (`channel=-225`, `fre
 - [ ] Confirm Wi-Fi channel and association
 - [ ] Confirm DHCP/dnsmasq remain disabled
 - [ ] Capture current `hostapd` and `rc_startup` configuration safely (exclude secrets)
-- [ ] Save and verify a configuration backup in Google Drive
+- [x] Save configuration backup in Google Drive (name and size confirmed; restore not tested)
 
 ## Notes
 
